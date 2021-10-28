@@ -1,0 +1,31 @@
+/*estilos del mapa*/
+.map-container-5{
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
+}
+.map-container-5 iframe{
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+
+/* Iconos de la pagina principal */
+.iconosPrincipal{
+    margin-top: 40px;
+    /*margint-lef: 20px;*/
+    flex-direction: column;
+    padding: 1em 0;
+    position: relative;
+}
+
+.iconosPrincipal a i {
+    display: auto;
+   /* display: flex; */
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 30px;
+}

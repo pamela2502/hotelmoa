@@ -1,0 +1,97 @@
+#pac-item-1{
+	margin-top: 40px;
+	padding-bottom:2rem;
+}
+
+.menu-btn-pac{
+	margin-top: 50px;
+}
+.datos{
+	margin-top: 70px;
+}
+#con{
+	font-family:'Times New Roman';
+	font-size: 30px;
+	text-align: center;
+}
+#mas{
+	font-family:'Times New Roman';
+	font-size: 17px;
+	text-align: center;
+}
+#c1{
+	width: 8%;
+	height: 550px;
+	float: left;
+}
+#c2{
+	width: 30%;
+	height: 550px;
+	float: left;
+}
+#c3{
+	width: 60%;
+	height: 550px;
+	float: right;
+}
+.carousel-serv{
+	width: 350px;
+	height: 350px;
+}
+#precio-serv{
+    width: 300px;
+    background-color: #ddd;
+    border: none;
+    text-align: right;
+    border-radius: 10px;
+    margin-top: 20px;
+	font-family:'Times New Roman';
+}
+#nombre-serv
+{   
+	margin-left: 150px;
+    font-size: 30px;
+    text-align: right;
+	font-family:'Times New Roman';
+}
+.car-pre-serv{
+	margin-top: 150px;
+	margin-left: 50px;
+}
+#serv-item-1{
+	margin-top: 40px;
+}
+
+.img-serv{
+	width: 350px;
+	height: 350px;
+}
+
+#serv-item-1{
+	margin-top: 40px;
+}
+
+p{
+	font-family: 'Times New Roman';
+	font-size: 80px;
+	text-align: center;
+}
+
+.menu-btn-hab{
+	margin-top: 50px;
+}
+
+.iconosPrincipal{
+    margin-top: 80px;
+    flex-direction:row;
+    padding: 10em;
+	float: right;
+}
+
+.iconosPrincipal a i {
+	margin-top: 8px;
+   padding:6px 25px;
+   flex-direction: row;
+   float: right;
+   margin-right: 25px;
+}

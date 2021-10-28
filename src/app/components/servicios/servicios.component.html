@@ -1,0 +1,85 @@
+
+<section class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- <div class="col-sm-3 mt-5"> -->
+            	<div id="list-example" class="list-group col-sm-3 mt-5">
+					<a class="list-group-item list-group-item-action" routerLink="/servicios" class="btn btn-outline-warning" href="#list-item-2">Hospedaje</a>
+					<a class="list-group-item list-group-item-action" routerLink="/servicios" class="btn btn-outline-warning" href="#list-item-3">Bufe</a>
+					<a class="list-group-item list-group-item-action" routerLink="/servicios" class="btn btn-outline-warning" href="#list-item-4">Barra libre</a>
+					<a class="list-group-item list-group-item-action" routerLink="/servicios" class="btn btn-outline-warning" href="#list-item-4">Piscina</a>
+					<a class="list-group-item list-group-item-action" routerLink="/servicios" class="btn btn-outline-warning" href="#list-item-4">Masayes</a>
+					<a class="list-group-item list-group-item-action" routerLink="/servicios" class="btn btn-outline-warning" href="#list-item-4">Pet Friendly</a>
+					<a class="list-group-item list-group-item-action" routerLink="/servicios" class="btn btn-outline-warning" href="#list-item-4">Yate privado</a>
+				</div>
+	        <!-- </div> -->
+
+            <!-- Contenido de la pagina principal -->
+	            <div id="serv-item-1" class="col-sm-9 border-0 shadow-lg" >
+	            	<!-- botones de menu -->
+	            	<div class="mb-5 mt-5">
+	                    <!-- <button type="button" class="btn btn-success col-md-4 ">Reserva ya</button> -->
+	                    <button type="button" class="btn btn-warning col-md-4 float-right" routerLink="/Creatupropiopaquete" >Crear paquete de servicios</button>
+	                </div>
+
+					<!-- carrousel y nombre servicio-->
+	                <div class="row car-pre-serv p-0">
+	                    <!--Card-->
+	                    <div class="card card-cascade narrower shadow " >
+	                        <!--Card content-->
+	                        <div class="card-body card-body-cascade text-center">
+	                           
+								<!-- aqui comienza el carrusel -->
+								<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<img src="assets/img/hab1.jpg" class="img-hab d-block w-100" alt="...">
+										</div>
+										<div class="carousel-item">
+											<img src="assets/img/hab2.jpg" class="img-hab d-block w-100" alt="...">
+										</div>
+										<div class="carousel-item">
+											<img src="assets/img/hab1.jpg" class="d-block w-100" alt="...">
+										</div>
+									</div>
+									<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+
+	                        </div>
+	                        <!--/.Card content-->
+	                    </div>
+	                    <!--/.Card-->
+	                    <!--  servicio-->
+	                    <div class="datos ml-2 text-center">
+                            <Label id="nombre-serv" class="d-block">Bufe</Label>
+                            <label id="nombre-serv" for="precio-serv"> Precio del servicio
+							<Label id="precio-serv" class="d-block">Q 200.00</Label>                                 
+                            </label>
+                        </div>
+	                </div>
+
+					
+	                 <!-- cantidad de camas y video -->
+	                 	<iframe
+	                 			class="mt-5"
+                                id="video-serv"
+                                src="https://www.youtube.com/embed/d5bbqKYu51w?controls=0"
+                                frameborder="0"
+                                allowfullscreen>
+                        </iframe>
+
+	                 <!-- parrafo -->
+	                 <div class="mt-5">
+		                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi impedit deleniti asperiores autem quis est odit dignissimos sapiente? Earum assumenda dignissimos tempore dolore, consequuntur nemo eos excepturi facere quis debitis!</p>
+		            </div>
+	            </div>
+        </div>
+    </div>
+</section>

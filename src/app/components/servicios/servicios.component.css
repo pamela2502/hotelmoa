@@ -1,0 +1,47 @@
+.card {
+	width: 395px;
+}
+
+.car-pre-serv{
+	margin-top: 150px;
+	margin-left: 50px;
+}
+.carousel-serv{
+	width: 350px;
+	height: 350px;
+}
+
+.img-serv{
+	width: 350px;
+	height: 350px;
+}
+
+#serv-item-1{
+	margin-top: 40px;
+}
+
+#video-serv{
+	margin-left: 50px;
+	width: 900px;
+	height: 290px;
+}
+
+/*datos de servicio*/
+.datos{
+	margin-top: 70px;
+}
+#precio-serv{
+    width: 300px;
+    background-color: #ddd;
+    border: none;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#nombre-serv
+{   
+	margin-left: 150px;
+    font-size: 30px;
+    text-align: center;
+}

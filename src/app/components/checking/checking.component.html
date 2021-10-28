@@ -1,0 +1,57 @@
+
+<style>
+    .col-md-4 {
+        margin: auto;
+        width: 100%;
+        border: 2px double #f2e009;
+        padding: 10px;
+        }
+    </style>
+    <style>
+        .form-group {
+            margin: auto;
+            width: 100%;
+            background-color: #78c7ff;
+            padding: 10px;
+            }
+        </style>
+        
+    
+    <div class="row">
+        <div class="col-md-4">
+            <label class="col-form-label mt-4" for="inputDefault"><p class="text-warning" style="font-size:120%; text-align:center;">Inserte la informacion necesaria para marcar el ingreso del cliente</p></label>
+            <div class="card">
+                <div class="card_body">
+                    <form (submit)="checkinpost()">
+                          <div class="form-group">
+                            <label class="col-form-label mt-4" for="inputDefault">Reserva</label>
+                            <input type="text" [(ngModel)]="checking.id_habitacion_reserva" name="reserva" class="form-control" placeholder="Reserva" required >
+                          </div>
+                          <div class="form-group">
+                            <label class="col-form-label mt-4" for="inputDefault">Cliente</label>
+                            <input type="integer" [(ngModel)]="checking.id_cliente" name="cliente" class="form-control" placeholder="cliente" required >
+                          </div>
+                          <div class="form-group">
+                            <label class="col-form-label mt-4" for="readOnlyInput">Antecedente</label>
+                            <input type="text" [(ngModel)]="checking.antecedente" name="antecedente" class="form-control" placeholder="antecedente" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="integer" [(ngModel)]="checking.hora_ingreso" name="hora" class="form-control" placeholder="hora" required disabled="">
+                        </div>
+                        <button type="submit" class="btn btn-outline-warning" style="margin:auto; width: 100%;">
+                            Marcar ingreso
+                        </button>	
+
+                        <div *ngIf="alert" class="alert alert-danger" role="alert">
+                            Inserte datos de manera correcta
+                          </div>
+                      
+                          <div *ngIf="bueno" class="alert alert-success" role="alert">
+                            Los datos son correctos de click en: <a href="/verchecking" class="alert-link">Continuar</a>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

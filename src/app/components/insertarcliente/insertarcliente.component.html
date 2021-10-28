@@ -1,0 +1,74 @@
+
+<style>
+    .col-md-4 {
+        margin: auto;
+        width: 60%;
+        border: 2px double #f2e009;
+        padding: 10px;
+        }
+    </style>
+    <style>
+        .form-group {
+            margin: auto;
+            width: 100%;
+            background-color: #78c7ff;
+            padding: 10px;
+            }
+        </style>
+
+<div class="row">
+	<div class="col-md-4">
+		<label class="col-form-label mt-4" for="inputDefault"><p class="text-warning" style="font-size:120%; text-align:center;">Inserte sus datos personales estos serviran para crear la reserva</p></label>
+		<div class="card">
+			<div class="card_body">
+				<form>
+
+
+                    <div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">Nombre</label>
+						<input type="text" [(ngModel)]="clientes.nombre_cliente" name="Nombre" class="form-control" placeholder="Nombre" required>
+					</div>
+
+                    <div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">Apellido</label>
+						<input type="text" [(ngModel)]="clientes.apellido_cliente" name="apellido" class="form-control" placeholder="Apellido" required>
+					</div>
+
+                    <div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">Numero de DPI</label>
+						<input type="text" [(ngModel)]="clientes.dpi_cliente" name="DPI" class="form-control" placeholder="DPI" required>
+					</div>
+
+                    <div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">Numero de Telefono</label>
+						<input type="text" [(ngModel)]="clientes.telefono_cliente" name="telefono" class="form-control" placeholder="Telefono" required>
+					</div>
+
+                    <div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">Cantidad de personas</label>
+						<input type="text" [(ngModel)]="clientes.cantidad_de_personas" name="cantidad de personas" class="form-control" placeholder="Cantidad de personas" required>
+					</div>
+
+                    <div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">Solicitudes especiales que el hotel deba tomar en cuenta para su estadia</label>
+						<input type="text" [(ngModel)]="clientes.solicitudes_especiales" name="solicitud" class="form-control" placeholder="Solicitudes especiales" required>
+					</div>
+
+					<button type="submit" class="btn btn-outline-warning" style="margin:auto; width: 100%;" (click)="clientegetall(); clienteput(id_clientes.id, clientes)">
+						Aceptar
+					</button>
+
+					<div *ngIf="alert" class="alert alert-danger" role="alert">
+						Inserte datos de manera correcta
+					  </div>
+				  
+					  <div *ngIf="bueno" class="alert alert-success" role="alert">
+						Los datos son correctos de click en: <a href="/qrreserva" class="alert-link">Continuar</a>
+						</div>
+
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+

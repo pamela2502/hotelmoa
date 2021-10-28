@@ -1,0 +1,59 @@
+<style>
+    .col-md-4 {
+        margin: auto;
+        width: 60%;
+        border: 2px double #f2e009;
+        padding: 10px;
+        }
+    </style>
+    <style>
+        .form-group {
+            margin: auto;
+            width: 100%;
+            background-color: #78c7ff;
+            padding: 10px;
+            }
+        </style>
+        
+    
+    <div class="row">
+        <div class="col-md-4">
+
+            <label class="col-form-label mt-4" for="inputDefault"><p class="text-warning" style="font-size:120%; text-align:center;">Inserte la informacion necesaria para marcar la salida del cliente</p></label>
+
+            <div class="card">
+                <div class="card_body">
+                    <form (submit)="detalle_insidencia_reservapost()">
+                          <div class="form-group">
+                            <label class="col-form-label mt-4" for="inputDefault">Incidencia</label>
+                            <input type="integer" [(ngModel)]="detalle_insidencia_reserva.id_incidencia" name="insidencia" class="form-control" placeholder="incidencia" required >
+                          </div>
+                          <div class="form-group">
+                            <label class="col-form-label mt-4" for="inputDefault">Codigo checking</label>
+                            <input type="text" [(ngModel)]="detalle_insidencia_reserva.id_checkin" name="checkin" class="form-control" placeholder="checkin" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label mt-4" for="inputDefault">Numero de habitacion</label>
+                            <input type="text" [(ngModel)]="detalle_insidencia_reserva.id_habitacion" name="habitacion" class="form-control" placeholder="habitacion" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="integer" [(ngModel)]="detalle_insidencia_reserva.total" name="total" class="form-control" placeholder="total" required disabled="">
+                        </div>
+                        <button type="submit" class="btn btn-outline-warning" style="margin:auto; width: 100%;">
+                            ingresar insidencia 
+                        </button>	
+
+                        <div *ngIf="alert" class="alert alert-danger" role="alert">
+                            Inserte datos de manera correcta
+                          </div>
+                      
+                          <div *ngIf="bueno" class="alert alert-success" role="alert">
+                            Los datos son correctos de click en: <a href="/marcarsalida" class="alert-link">Continuar</a>
+                            </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+

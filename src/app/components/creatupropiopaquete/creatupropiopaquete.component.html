@@ -1,0 +1,68 @@
+<style>
+.col-md-4 {
+	margin: auto;
+	width: 60%;
+	border: 2px double #f2e009;
+	padding: 10px;
+	}
+</style>
+<style>
+	.form-group {
+		margin: auto;
+		width: 100%;
+		background-color: #78c7ff;
+		padding: 10px;
+		}
+	</style>
+	
+
+
+<div class="row">
+	<div class="col-md-4">
+		<label class="col-form-label mt-4" for="inputDefault"><p class="text-warning" style="font-size:120%; text-align:center;">Inserte la informacion necesaria para crear su paquete</p></label>
+		<div class="card">
+			<div class="card_body">
+				<form (submit)="paquetepost()">
+					<div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">Nombre del paquete</label>
+						<input type="text" [(ngModel)]="paquete.nombre_paquete" name="Nombrepaquete" class="form-control" placeholder="Nombre del paquete" required autofocus>
+					  </div>
+					  <div class="form-group">
+						  <label class="col-form-label mt-4" for="readOnlyInput">Servicios incluidos</label>
+						  <input type="text" [(ngModel)]="paquete.servicios_incluidos" name="serviciosincluidos" class="form-control" placeholder="Mi propio paquete" required readonly="">
+					  </div>
+					  <div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">Descripcion del paquete</label>
+						<input type="text" [(ngModel)]="paquete.descripcion" name="descripcionPaquete" class="form-control" placeholder="Descripcion del paquete" required >
+					  </div>
+					  <div class="form-group">
+						<label class="col-form-label mt-4" for="inputDefault">cantidad de personas</label>
+						<input type="number" [(ngModel)]="paquete.cantidad_de_personas_incluidas" name="cantidaddepersonas" class="form-control" placeholder="cantidad de personas incluidas" required="required">
+					  </div>
+					  <div class="form-group">
+						<label class="col-form-label mt-4" for="readOnlyInput">Color de brazalete</label>
+						<input type="text" [(ngModel)]="paquete.color_brasalete" name="color_brasalete" class="form-control" placeholder="Morado" required readonly="">
+					</div>
+					<div class="form-group">
+						<input type="integer" [(ngModel)]="paquete.precio_paquete" name="precio" class="form-control" placeholder="0" required disabled="">
+					</div>
+					<button type="submit" class="btn btn-outline-warning" style="margin:auto; width: 100%;" >
+						Crear paquete
+					</button>	
+
+					<div *ngIf="alert" class="alert alert-danger" role="alert">
+						Inserte datos de manera correcta
+					</div>
+
+					<div *ngIf="bueno" class="alert alert-success" role="alert">
+						Los datos son correctos de click en: <a href="/seleccionarservicios" class="alert-link">Continuar</a>
+					  </div>
+					  
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--onclick="location.href='/seleccionarservicios'"-->

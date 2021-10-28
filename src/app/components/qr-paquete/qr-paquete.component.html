@@ -1,0 +1,88 @@
+
+<style>
+    .col-md-4 {
+        margin: auto;
+        width: 100%;
+        border: 2px double #f2e009;
+        padding: 10px;
+        }
+    </style>
+  
+  <style>
+    .container {
+        margin: auto;
+        width: 100%;
+        background-color: #78c7ff;
+        padding: 10px;
+        }
+    </style>
+
+<style>
+    .QR {
+        margin: auto;
+        width: 100%;
+        text-align:center;
+
+        background-color: #f2e009;
+        padding: 10px;
+        vertical-align: middle;
+        }     
+    </style>
+  
+  <style>
+    .col-sm-12 {
+        margin: auto;
+        width: 100%;
+        background-color: #f2e009;
+        padding: 10px;
+        }     
+    </style>
+
+
+<div class="row">
+	
+    <div class="col-md-4">
+      <label class="col-form-label mt-4" for="inputDefault"><p class="text-warning" style="font-size:120%; text-align:center;">Crea tu propio paquete</p></label>
+    <div class="card">
+    <div class="card_body">
+
+        
+<div class="container">
+    
+    <table class="table table-border table-striped">
+       
+        <tbody>
+            <tr>
+                <th>Nombre del paquete</th>
+            </tr>
+            <tr *ngFor='let paquete of listadepaquete'>
+                <td><span>{{paquete.nombre_paquete}}</span></td>
+            </tr>
+            
+            <tr>
+                <th>Cantidad de personas que incluye el paquete</th>
+            </tr>
+            <tr *ngFor='let paquete of listadepaquete'>
+                <td><span>{{paquete.cantidad_de_personas_incluidas}}</span></td>
+            </tr>
+
+            <tr>
+                <th>Precio del paquete</th>
+            </tr>
+            <tr *ngFor='let paquete of listadepaquete'>
+                <td><span>Q.{{paquete.precio_paquete}}.00</span></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+<div class="QR" *ngIf="alert">
+    <qr-code [value]="qrInfo"></qr-code>
+  </div>
+  
+<button class="btn btn-outline-warning" style="margin:auto; width: 100%;" (click)="paquetemax()">Mostrar codigo QR</button>
+
+
+
+  

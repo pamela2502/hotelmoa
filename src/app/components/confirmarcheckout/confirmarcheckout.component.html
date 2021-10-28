@@ -1,0 +1,47 @@
+
+<style>
+    .col-md-4 {
+        margin: auto;
+        width: 60%;
+        border: 2px double #f2e009;
+        padding: 10px;
+        }
+    </style>
+    <style>
+        .form-group {
+            margin: auto;
+            width: 100%;
+            background-color: #78c7ff;
+            padding: 10px;
+            }
+        </style>
+
+<div class="col-md-4">
+    <label class="col-form-label mt-4" for="inputDefault"><p class="text-warning" style="font-size:120%; text-align:center;">Oprime al boton para marcar la hora de la salida</p></label>
+
+    <div class="card">
+        <div class="card_body">
+            <form (submit)="checkoutpost()">
+                  <div class="form-group">
+                    <label class="col-form-label mt-4" for="readOnlyInput">Hora salida</label>
+                    <input type="integer" [(ngModel)]="checkouts.hora_salida" name="hora" class="form-control" placeholder="hora" required disabled="">
+                </div>
+                <div class="form-group">
+                    <input type="integer" [(ngModel)]="checkouts.id_detalle_insidencia_reserva" name="detalle" class="form-control" placeholder="detalle" required disabled="">
+                </div>
+                <button type="submit" class="btn btn-outline-warning" style="margin:auto; width: 100%;">
+                    Marcar salida
+                </button>	
+
+                <div *ngIf="alert" class="alert alert-danger" role="alert">
+                    Inserte datos de manera correcta
+                  </div>
+              
+                  <div *ngIf="bueno" class="alert alert-success" role="alert">
+                    Los datos son correctos de click en: <a href="/inicio" class="alert-link">Continuar</a>
+                    </div>
+
+            </form>
+        </div>
+    </div>
+</div>
